@@ -1,0 +1,37 @@
+-- VERSION_4
+-- START DISKCACHE_2
+D:\WorkSapce\.metadata\.plugins\org.eclipse.core.resources\.projects\mysite\com.python.pydev.analysis\v2_indexcache
+mysite.__init__|1444830752831867000|D:\WorkSapce\mysite\src\mysite\__init__.py
+mysite.urls|1444830752831867000|D:\WorkSapce\mysite\src\mysite\urls.py
+mysite.wsgi|1444830752831867000|D:\WorkSapce\mysite\src\mysite\wsgi.py
+mysite.settings|1444830753181868000|D:\WorkSapce\mysite\src\mysite\settings.py
+manage|1444830752801867000|D:\WorkSapce\mysite\src\manage.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+3=mysite.urls
+2=mysite.wsgi
+1=mysite.settings
+-- END DICTIONARY
+-- START TREE 1
+16
+all|1|ALLOWED_HOSTS!11@
+app|1|application!19@
+bas|1|BASE_DIR!11@
+dat|1|DATABASES!11@
+deb|1|DEBUG!11@
+ins|1|INSTALLED_APPS!11@
+lan|1|LANGUAGE_CODE!11@
+mid|1|MIDDLEWARE_CLASSES!11@
+roo|1|ROOT_URLCONF!11@
+sec|1|SECRET_KEY!11@
+sta|1|STATIC_URL!11@
+tem|1|TEMPLATE_DEBUG!11@
+tim|1|TIME_ZONE!11@
+url|1|urlpatterns!27@
+use|3|USE_I18N!11@USE_TZ!11@USE_L10N!11@
+wsg|1|WSGI_APPLICATION!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

@@ -1,0 +1,6 @@
+MODULES_MANAGER_V2
+manage|D:\WorkSapce\mysite\src\manage.py
+mysite.__init__|D:\WorkSapce\mysite\src\mysite\__init__.py
+mysite.settings|D:\WorkSapce\mysite\src\mysite\settings.py
+mysite.urls|D:\WorkSapce\mysite\src\mysite\urls.py
+mysite.wsgi|D:\WorkSapce\mysite\src\mysite\wsgi.py
