@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html";charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/*
+ * 为#employeetable 的所有的a节点添加Onclick响应函数：
+ *1.弹出确认对话框:确定要删除xx的信息吗?xx为当前a节点所在的td所在的tr的第一个td子节点的文本值，
+*		 且要去除前后空格。
+ *2.若点击"确认",要删除a节点的所在的行
+ *
+ * 注意：
+ * 1.a节点是一个超级链接，可以在其onclick事件中通过返回false,来取消默认行为
+ * 2.tr的直接父节点
+ *3.可以把去除前后空格的代码写成一个trim(str)函数
+ */
+
+ 
+</script>
+</head>
+<body>
+
+	<center>
+		<br> <br>添加新员工<br><br> 
+		name: <input type="text" name="name" id="name" />&nbsp;&nbsp;
+		email: <input type="text" name="email" id="email" />&nbsp;&nbsp;
+		salary: <input type="text" name="salary" id="salary" /><br><br>
+		<button id="addEmpButton">Submit</button>
+		<br><br>
+		<hr>
+		<br><br>
+		<table id="employeetable" border="1" cellpadding="5" cellspacing="">
+			<tbody>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Salary</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr>
+					<td>Tom</td>
+					<td>tom@tom.com</td>
+					<td>5000</td>
+					<td><a href="deleteEmp?id=001"></a></td>
+				</tr>
+				<tr>
+					<td>Jerry</td>
+					<td>jerry@sohu.com</td>
+					<td>8000</td>
+					<td><a href="deleteEmp?id=002"></a></td>
+				</tr>	
+				<tr>
+					<td>Bob</td>
+					<td>bob@tom.com</td>
+					<td>10000</td>
+					<td><a href="deleteEmp?id=003"></a></td>
+				</tr>			
+			</tbody>
+								
+		</table>
+	
+	
+	
+	
+	</center>
+</body>
+</html>

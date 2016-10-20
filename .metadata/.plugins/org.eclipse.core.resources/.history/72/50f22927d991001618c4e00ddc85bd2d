@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" ;charset="gbk">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		
+		//1.为#province添加onchange函数
+		document.getElementById("province").onchange=function(){
+			//alert("onchange...");
+			
+			//1.1 把#city节点除第一个子节点外都移除。
+			
+			//2.加载cities.xml文件。得到代表该文档的Document对象
+			
+			var xmlDoc=parseXml("cities.xml");
+			//3.在cities.xml文档中查找和选择的省匹配的province节点
+			var provinces=xmlDoc.getElementsByTagName("province");
+			alert(provinces.length);
+			
+			//4.再得到province节点的所有city子节点
+			
+			//5.遍历city子节点，得到每一个city子节点的文本值
+			
+			//6.利用得到的文本值创建option节点
+			//<option></option>
+			
+			//7.并把6创建的option节点添加为#city的子节点
+			
+		}
+		
+		//js解析xml文档的函数，只支持ie
+		function parseXml(fileName){
+			//创建DOM解析器
+			var doc=new ActiveXObject("Microsoft.XMLDOM");
+			doc.async="false";
+			//加载XML文档，获取XML文档对象
+			doc.load(fileName);
+			return doc;
+		}
+	}
+
+</script>
+</head>
+<body>
+	<select id="province">
+		<option value="">请选择：</option>
+		<option value="河北省">河北省</option>
+		<option value="辽宁省">辽宁省</option>
+		<option value="山东省">山东省</option>
+	</select>
+	
+	<select id="city"><option value="...">请选择...</option></select>
+</body>
+</html>

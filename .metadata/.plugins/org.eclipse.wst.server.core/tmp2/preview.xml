@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server port="8080">
+  <module context="day0_0" name="day0_0" path="D:/WorkSapce/.metadata/.plugins/org.eclipse.wst.server.core/tmp2/day0_0" type="static"/>
+</server>

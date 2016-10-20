@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html";charset="gbk">
+    <!-- 导入jQuery库 -->
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+     
+    $(function(){
+    	$("#checkedAll_2").click(function(){
+    		$(":checkbox[name='items']").attr("checked",flag);
+    		this.checked;
+    	});
+    })
+    </script>
+</head>
+<body>
+    <form method="post" action="">
+    你爱好的运动是？<input type="checkbox" id="checkedAll_2" />全选/全不选
+    
+    <br /><input type="checkbox" name="items" value="足球" />足球
+          <input type="checkbox" name="items" value="篮球" />篮球
+          <input type="checkbox" name="items" value="羽毛球" />羽毛球
+          <input type="checkbox" name="items" value="乒乓球" />乒乓球
+     <br /> <input type="button" id="CheckedAll" value="全 选" />
+     <input type="button" id="CheckNo" value="全不选" />
+     <input type="button" id="CheckRev" value="反选" />
+     <input type="button" id="send" value="提交" />
+     
+    </form>
+</body>
+</html>
