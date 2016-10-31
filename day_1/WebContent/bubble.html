@@ -33,8 +33,27 @@
 				height: 16px;
 			}
 		</style>
-		<script type="text/javascript" src="../scripts/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="jquery-1.7.2.js"></script>
 		<script type="text/javascript">
+		   
+		$(function(){
+			//事件的冒泡
+			$("body").click(function(){
+				alert("body click");
+			});
+			
+			$("#content").click(function(){
+				alert("div click");
+			});
+			
+			$("span").click(function(){
+				alert("span click");
+				//通过在响应函数的结尾返回false，可以阻止冒泡。
+				return false;
+			});
+		})
+		
+		
 		
 			$(function(){
 				//事件的冒泡: 什么是事件的冒泡

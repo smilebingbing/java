@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc =new Scanner(System.in);
+		while(sc.hasNext()){
+		int M=sc.nextInt();
+		int N=sc.nextInt();
+		if(M<0||M>10||N<1||N>10){
+			System.out.println(-1);
+		}else{
+			System.out.println(count(M,N));
+		}
+		sc.close();
+	}
+}
+public static int count(int m,int n){
+	if(m<0){
+		return 0;
+	}
+	if(n==1){
+		return 1;
+	}
+	if(m==1||n==0){
+		return 1;
+	}
+	//放苹果有两种情况，一种是有盘子为空，一种是每个盘子中都有苹果
+	return count(m,n-1)+count(m-n,n);
+	
+  }
+}

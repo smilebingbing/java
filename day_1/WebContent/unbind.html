@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Untitled Document</title>
 		
-		<script type="text/javascript" src="scripts/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="jquery-1.7.2.js"></script>
 		<script type="text/javascript">
 			
 			//测试移除事件: 使用 unbind 移除事件. 
@@ -21,6 +21,13 @@
 					//对于 #bj 节点, 点击一次后, 就没有 click 响应函数了
 					if(this.id == "bj")
 						$("#bj").unbind("click");
+				});
+				
+				$("li").click(function(){
+					alert(this.firstChild.nodeValue);
+				if(this.id=="bj")
+					$("#bj").unbind("click");
+				
 				});
 				
 			})
