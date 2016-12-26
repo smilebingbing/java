@@ -1,0 +1,187 @@
+1.使用JavaEE 版本的Eclipse 开发动态的WEB工程（JavaWEB项目)
+1). 把开发选项切换到javaEE
+2).可以在Windows->Show View 中找到Package Explorer,并把其
+拖拽到开发区的左边
+3). 在Servers面板中新建tomcat服务器，一定要关联到Tomcat安装的根目录
+4).新建一个动态的web工程
+其中target runtime需选择tomcat 6.0
+5).开发Java WEB应用
+6).可以通过run on server来运行web项目
+
+2.Servlet的HelloWorld
+1).创建一个Servlet 接口的实现类
+public class HelloServlet implements Servlet
+
+2). 在web.xml文件中配置和映射这个Servlet
+  <servlet>
+  	<servlet-name>helloServlet</servlet-name>
+ 	<servlet-class>com.atguigu.javaweb.HelloServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+	<servlet-name>helloServlet</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+ 3.Servlet容器:运行Servlet等的软件环境
+ 1).可以来创建Servlet，并调用Servlet 的相关生命周期方法
+ 2).JSP filter listener,tag...
+ 
+ 4.Servlet 生命周期的方法:
+ 1). 构造器：只被调用一次  ，第一次请求Servlet时，创建Servlet的实例，调用构造器
+ 这说明Servlet 是单实例的!
+ 2). init 方法: 只被调用一次，在创建好实例后立即被调用，用于初始化当前Servlet
+ 
+ 3). service:被多次调用，每次请求都会调用service方法，实际用于响应请求
+ 4). destroy:只被调用一次，在当前Servlet所在的WEB应用被卸载前调用，用于释放当前Servlet所占用的资源
+ 
+ 
+ 5.load-on-startup参数
+ 1). 配置在servlet节点中
+ 2). load-on-startup:可以指定Servlet被创建的时机，若为负数，则在第一次请求时被创建，若为0或负数，则在当前WEB应用被Servlet容器加载时创建实例
+ 且数越小越早被创建。
+ 
+ 6. 关于servlet-mapping
+ 1).同一个Servlet可以被映射到多个URL上，即多个<servlet-mapping>元素的<servlet-name>子元素的设置值可以是同一个Servlet的注册名
+ 
+ 2).在Servlet映射到的URL中 也可以使用*通配符，但是只能有两种固定的格式:一种格式是"*.扩展名",
+ 另一种格式是以正斜杠(/)开头并以“/*"结尾
+ 
+ 7. ServletConfig : 封装了Servlet 的配置信息，并且可以获取ServletContext对象
+ 
+ 1). 配置Servlet初始化参数,且节点必须在load-on-startup参数的前面
+ <init-param>
+ 	<param-name>user</param-name>
+ 	<param-value>root</param-value>
+ </init-param>
+ 
+ <init-param>
+ 	<param-name>password</param-name>
+ 	<param-value>1230</param-value>
+ </init-param>
+ 
+ 2). 获取初始化参数:
+  > getInitParameter(String name):获取指定参数名的初始化参数
+  > getInitParameterNames():获取参数名组成的Enumeration对象。
+  
+  		String user=servletConfig.getInitParameter("user");
+		System.out.println("user:"+user);
+		
+		Enumeration<String> names=servletConfig.getInitParameterNames();
+		while(names.hasMoreElements()){
+			String name=names.nextElement(); 
+			String value=servletConfig.getInitParameter(name);
+			System.out.println("^^"+name+":"+name);
+		}
+		
+3).获取Servlet的配置名称(了解)
+
+8. ServletContext
+
+1).可以由ServletConfig获取
+ServletContext servletContext =servletConfig.getServletContext();
+
+2).该对象代表当前WEB应用: 可以认为ServletContext是当前WEB应用的大管家，可以从中获取当前WEB应用的各个方面的信息
+
+  获取当前WEB应用的初始化参数
+  
+  设置初始化参数：可以为所有的Servlet所获取，而Servlet的初始化参数只有那个Servlet可以获取
+  
+    <context-param>
+  		<param-name>driver</param-name>
+  		<param-value>com.mysql.jdbc.Driver</param-value>
+  </context-param>
+  
+  方法：
+  getInitParameter
+  getInitParameterNames
+ 代码：
+  ServletContext servletContext=servletConfig.getServletContext();
+  
+  		String driver=servletContext.getInitParameter("driver");
+		System.out.println("driver"+driver);
+	
+	    Enumeration<String> names2=servletConfig.getInitParameterNames();
+	    while(names2.hasMoreElements()){
+	    	String name=names2.nextElement();
+	    	System.out.println("-->"+name);
+	    }
+  
+  
+获取当前WEB应用的某一个文件在服务器上的绝对路径，而不是部署前的路径
+getRealPath(String path);
+
+获取当前WEB应用的名称
+
+getContextPath()
+
+获取当前WEB应用的某一个文件对应的输入流
+getResourceAsStream(String path) :path的/为当前WEB应用的根目录
+
+  和Attribute相关的几个方法
+  
+9. 	GET和POST请求：
+1). 使用GET方式传递参数
+在浏览器地址栏中输入某个URL地址或单击网页上的一个超链接时，浏览器发出的HTTP请求消息的请求方式为GET
+如果网页中的<form>表单元素的method属性被设置为了"GET"，浏览器提交这个form表单时生成的HTTP请求消息的请求方式也为GET
+使用GET请求方式给WEB	服务器传递参数的格式
+http://www.atguigu.com/counter.jsp?name=lc&password=123
+使用GET方式传送的数据量一般限制在1kB以下。
+
+2).使用POST方式传递参数：
+POST请求方式主要用于向WEB服务器端程序提交FORM表单中的数据
+POST方式将各个表单字段元素及其数据作为HTTP消息的实体内容发送给WEB服务器，
+传送的数据量要比使用GET方式传送的数据量大得多。
+
+
+10. 如何在Servlet中获取请求信息：
+
+1).Servlet的service()方法用于应答请求: 因为每次请求都会调用service()方法
+
+public void service(ServletRequest request, ServletResponse response) 
+            throws ServletException, IOException 
+
+ServletRequest:封装了请求信息，可以从中获取到任何的请求信息
+ServletResponse:封装了响应信息，如果想给用户什么响应，具体可以使用该接口的方法实现。
+
+
+这两个接口的实现类都是服务器给予实现的，在服务器调用service方法时传入
+
+
+2). ServletRequest:
+
+获取请求参数：
+String getParameter(String name)
+根据请求参数的名字，返回参数值
+若请求参数有多个值(例如checkbox),该方法只能获取到第一个提交的值。
+		
+Map getParameterMap()
+		
+		返回请求参数的键值对 ：key:参数名,value:参数值,String 数组类型
+Enumeration getParameterNames()
+		返回参数名对应的Enumeration对象，
+		类似于ServletConfig(或ServletContext)的getInitParameterNames()方法
+String[] getParameterValues(String name)
+根据请求参数的名字，返回请求参数对应的字符串数组
+
+获取请求字符串
+		String queryString =httpServletRequest.getQueryString();
+		System.out.println(queryString);
+
+
+  获取请求的URL
+  HttpServletRequest:是ServletRequest的子接口，针对于HTTP请求所定义。里边包含了大量获取HTTP请求相关的方法
+  		HttpServletRequest httpServletRequest =(HttpServletRequest) request;
+		String requestURI =httpServletRequest.getRequestURI();
+		System.out.println(requestURI);
+  
+  获取请求方式:
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 

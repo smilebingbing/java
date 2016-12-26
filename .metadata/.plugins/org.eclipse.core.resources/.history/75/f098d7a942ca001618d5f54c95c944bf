@@ -1,0 +1,8 @@
+package com.atguigu.test;
+
+class Person {
+
+	public String getPersonInfo(){
+		return "person--info";
+	}
+}
