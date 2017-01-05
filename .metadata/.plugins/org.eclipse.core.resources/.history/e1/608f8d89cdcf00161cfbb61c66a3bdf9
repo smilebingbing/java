@@ -1,0 +1,10 @@
+package com.atguigu.mvcapp.dao;
+
+import java.util.List;
+
+import com.atguigu.mvcapp.domain.Customer;
+
+public interface CustomerDAO {
+
+	public List<Customer>
+}

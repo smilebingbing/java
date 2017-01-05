@@ -1,0 +1,7 @@
+package com.atguigu.mvcapp.dao.impl;
+
+import com.atguigu.mvcapp.dao.CustomerDAO;
+
+public class CustomerDAOJdbcImpl extends DAO<Custuomer> implements CustomerDAO{
+
+}

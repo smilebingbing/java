@@ -1,0 +1,10 @@
+package com.atguigu.javaweb.mvc;
+
+import java.util.List;
+
+public class StudentDao {
+
+	public List<Student> getAll(){
+		return null;
+	}
+}

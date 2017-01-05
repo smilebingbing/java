@@ -1,0 +1,17 @@
+package com.atguigu.mvcapp.servlet;
+
+import java.io.InputStream;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+
+
+
+public class InitServlet extends HttpServlet {
+	
+	
+	@Override
+	public void init() throws ServletException {
+		InputStream
+	}
+
+}

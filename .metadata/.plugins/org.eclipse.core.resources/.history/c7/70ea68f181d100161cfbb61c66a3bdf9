@@ -1,0 +1,34 @@
+package com.atguigu.mvcapp.dao.factory;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.atguigu.mvcapp.dao.CustomerDAO;
+import com.atguigu.mvcapp.dao.impl.CustomerDAOJdbcImpl;
+import com.atguigu.mvcapp.dao.impl.CustomerDAOXMLImpl;
+
+public class CustomerDAOFactory {
+	
+	private Map<String,CustomerDAO> daos = new HashMap<String,CustomerDAO>();
+			
+	private CustomerDAOFactory(){
+		daos.put("jdbc", new CustomerDAOJdbcImpl());
+		daos.put("xml",new CustomerDAOXMLImpl());
+	}
+	
+	private static CustomerDAOFactory instance = new CustomerDAOFactory(); 
+	
+	public static CustomerDAOFactory getInstance() {
+		return instance;
+	}
+	
+	private static String type =null;
+	
+	public static String setType(String type) {
+		CustomerDAOFactory.type=type;
+	}
+	
+	public CustomerDAO getCustomerDAO(){
+		return daos.get(type);
+	}
+}

@@ -1,0 +1,75 @@
+JSP
+
+1).对网页中要动态产生的内容采用java代码来编写
+
+2).helloworld:
+
+新建一个JSP页面，在body节点内的<% %>即可编写java代码
+
+3). JSP可以放置在WEB应用程序中的除了WEB-INF及其子目录外的其他任何目录中，
+JSP页面的访问路径与普通HTML页面的访问路径形式也完全一样
+
+4). JSP 运行原理：JSP本质是Servlet
+
+每个JSP页面在第一次被访问时，JSP引擎将它翻译成一个Servlet源程序，
+接着再把这个Servlet源程序编译成Servlet的class 类文件，
+然后再由WEB容器（Servlet引擎）像调用普通Servlet程序一样的方式来装载和解释执行这个由JSP页面翻译成的Servlet程序
+
+5). JSP页面的隐含变量：没有声明就可以使用的对象
+
+public void _jspService(HttpServletRequest request,HttpServletResponse response)
+		throws java.io.IOException,ServletException {
+		
+		PageContext pageContext =null;
+		HttpSession session =null;
+		ServletContext application =null;
+		ServletConfig config =null;
+		JspWriter out =null;
+		Object page =this;
+		
+		//...
+		
+		//使用<% %>编写的代码在此位置，可以用到request,response,pageContext,session
+		//application,config,out,page这8个隐含对象（实际上还可以使用一个叫exception的隐含变量）
+		
+		}
+		
+		
+---1--- request: HttpServletRequest 对象
+---2--- response: HttpServletResponse 的对象（在JSP页面中几乎不会调用response的任何方法）
+---3--- pageContext: 页面的上下文，是PageContext的一个对象。
+		可以从该对象中获取到其他8个隐含对象，也可以从中获取页面的其他信息
+---4--- session: 代表浏览器和服务器的一次会话，是HttpSession的一个对象。
+
+---5--- application :代表当前WEB应用，是ServletContext对象
+
+---6--- config: 当前JSP对应的Servlet的ServletConfig对象（几乎不使用）
+
+---7--- out: JspWriter 对象，调用out.println() 可以直接把字符串打印到浏览器上
+
+---8--- page: 指向当前JSP对应的Servlet对象的引用，但为Object类型，开发几乎不会使用
+
+---9--- exception: 
+
+pageContext,request,session,application(对属性的的作用域的范围从小到大)
+
+out,response,config,page,
+		
+		
+2. 请求的转发和重定向：
+
+1). 本质区别：请求的转发只发出了一次请求，而重定向则发出了两次请求。
+
+具体：
+
+---1---  请求的转发：地址栏是初次发出请求的地址，
+                          请求的重定向： 地址栏不再是初次发出的请求地址，地址栏为最后响应的那个地址
+      
+---2---  请求转发：在最终的Servlet中，request对象和中转的那个request是同一个对象
+                          请求的重定向：在最终的Servlet中，request对象和中转的那个request不是同一个对象
+                          
+---3---  请求的转发: 只能转发给当前WEB应用的资源
+                          请求的重定向： 可以重定向到任何资源。
+                         
+---4---  请求的转发： / 代表的是当前WEB 应用的根目录
+                         请求的重定向: / 代表的是当前WEB 站点的根目录

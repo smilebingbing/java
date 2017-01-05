@@ -1,0 +1,8 @@
+package com.atguigu.javaweb.mvc;
+
+public class StudentDao {
+
+	public List<Student> getAll(){
+		return null;
+	}
+}

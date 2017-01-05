@@ -1,0 +1,14 @@
+package com.atguigu.mvcapp.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JdbcUtilsTest {
+
+	@Test
+	public void testGetConnection() {
+		fail("Not yet implemented");
+	}
+
+}

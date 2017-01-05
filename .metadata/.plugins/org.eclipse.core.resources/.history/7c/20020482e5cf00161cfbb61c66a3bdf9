@@ -1,0 +1,17 @@
+package com.atguigu.mvcapp.test;
+
+import org.junit.Test;
+
+import com.atguigu.mvcapp.db.JdbcUtils;
+import com.mysql.jdbc.Connection;
+
+public class JdbcUtilsTest {
+
+	@Test
+	public void testGetConnection() {
+
+		Connection connection =JdbcUtils.getConnection();
+	
+	}
+
+}

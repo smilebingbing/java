@@ -1,0 +1,11 @@
+package com.atguigu.javaweb;
+
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class ValidateColorServlet
+ */
+public class ValidateColorServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+}

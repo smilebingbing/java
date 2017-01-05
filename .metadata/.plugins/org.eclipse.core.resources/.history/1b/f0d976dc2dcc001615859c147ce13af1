@@ -1,0 +1,5 @@
+package com.atguigu.javaweb;
+
+public class ServletException extends Exception {
+
+}
