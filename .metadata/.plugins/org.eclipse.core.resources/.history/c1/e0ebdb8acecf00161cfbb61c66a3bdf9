@@ -1,5 +1,0 @@
-package com.atguigu.mvcapp.dao.impl;
-
-public class CustomerDAOJdbcImpl {
-
-}

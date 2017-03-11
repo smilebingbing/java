@@ -20,7 +20,7 @@ public class CreateQRCode {
 		int width=300;
 		int height=300;
 		String format="png";
-		String content="www.imooc.com";
+		String content="http://blog.csdn.net/haizeiwangdianxia";
 		
 		//定义二维码的参数
 		HashMap hints=new HashMap();

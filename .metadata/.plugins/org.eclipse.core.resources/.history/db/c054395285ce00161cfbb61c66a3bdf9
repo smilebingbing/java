@@ -1,9 +1,0 @@
-package com.atguigu.javaweb.mvc;
-
-public class Student {
-
-	private Integer id;
-	
-	private String studentName;
-
-}

@@ -1,0 +1,24 @@
+package com.offer.java;
+
+import java.util.Stack;
+
+public class Palindrome {
+
+	public boolean isPalindrome(Node head){
+		Stack<Integer> stack=new Stack<Integer>();
+		Node p=head;
+		while(p!=null){
+			stack.push(p.value);
+			p=p.next;
+		}
+		while(head!=null){
+			if(stack.pop()==head.value){
+				head=head.next;
+			}else{
+				return false;
+			}
+			
+		}
+		return true;
+	}
+}

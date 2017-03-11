@@ -1,0 +1,98 @@
+1. 进行文件上传时，表单需要做的准备
+
+1). 请求方式为POST :<form action="uploadServlet" method="post"
+2). 使用file的表单域:<input type="file" name="file"/>
+3). 使用enctype="multipart/form-data"的请求编码方式:
+	<form action="uploadServlet" method="post" enctype="multipart/form-data">
+	
+4). 关于enctype:
+  
+  	> application/x-www-form
+  	> multipart/form-data
+  	
+2. 服务端：
+
+1). 不能再使用request.getParameter()等方式获取请求信息，获取不到，因为请求的编码方式已经改为multipart/form-data,
+以二进制的方式来提交请求信息
+
+2). 可以使用输入流的方式获取
+
+3). 具体使用commons-fileupload组件来完成文件的上传操作
+
+I. 搭建环境：加入
+commons-fileupload-1.2.1.jar
+commons-io-2.0.jar
+
+II. 基本思想：
+	> commons-fileupload 可以解析请求，得到一个FileItem对象组成的List
+	> commons-fileupload 把所有的请求信息都解析为FileItem对象，无论是一个一般的文本域还是一个文件域，
+	> 可以调用FileItem的isFormField()方法判断是一个表单域或不是表单域（则是一个文件域）
+	> 再来进一步获取信息
+	
+	if(item.isFormField()){
+		String name=item.getFieldName();
+		String value=item.getString();
+		...
+	}
+	
+	if(!item.isFormField()){
+		String fieldName=item.getFieldName();
+		String fileNmae
+		String contentType
+		boolean isInMemory
+		long sizeInBytes
+		...
+		
+		
+III. 如何得到List<FileItem>对象
+
+	// Create a factory for disk-based file items
+	DiskFileItemFactory factory = new DiskFileItemFactory();
+
+	// Set factory constraints
+	factory.setSizeThreshold(yourMaxMemorySize);
+	factory.setRepository(yourTempDirectory);
+
+	// Create a new file upload handler
+	ServletFileUpload upload = new ServletFileUpload(factory);
+
+	// Set overall request size constraint
+	upload.setSizeMax(yourMaxRequestSize);
+
+	// Parse the request
+	List<FileItem> items = upload.parseRequest(request);
+
+
+2. 使用fileupload 组件完成文件的上传应用
+
+1). 需求：
+
+I. 上传
+		> 在upload.jsp页面上使用jQuery实现“新增一个附件” ，“删除附件” ，但至少需要保留一个
+		> 对文件的 扩展名和文件的大小进行验证,以下的规则是可配置的，而不是写死在程序中的
+				>> 文件的扩展名必须为：pptx,docx,doc
+				>> 每个文件的大小不能超过1M
+				>> 总的文件大小不能超过5M
+				
+		> 若验证失败，则在Upload.jsp页面上显示错误消息：
+			>> 若某一个文件不符合要求：xxx文件扩展名不合法或xxx文件大小超过1M
+			>> 总的文件大小不能超过5M
+			
+		> 若验证通过，则进行文件的上传操作
+		
+			>> 文件上传，并给一个不能和其他文件重复的名字，但扩展名不变
+			>> 在对应的数据表中添加一条记录
+			
+			id file_name file_path file_desc
+			
+II. 下载
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,0 @@
-package com.atguigu.mvcapp.dao.factory;
-
-public class CustomerDAOFactory {
-
-}

@@ -1,0 +1,6 @@
+package com.atguigu.bookstore.domain;
+
+public class Book {
+
+	
+}

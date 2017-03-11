@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="15">
-    <list key="modules" value0="day_0105::org.eclipse.jst.jee.server:day_0105::jst.web::2.5"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="29">
+    <list key="modules" value0="day0107::org.eclipse.jst.jee.server:day0107::jst.web::2.5" value1="fileUpload::org.eclipse.jst.jee.server:fileUpload::jst.web::2.5" value2="UploadFile::org.eclipse.jst.jee.server:UploadFile::jst.web::2.5"/>
   </server>
 </servers>
