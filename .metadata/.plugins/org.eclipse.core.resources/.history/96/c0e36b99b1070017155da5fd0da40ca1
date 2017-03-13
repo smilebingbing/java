@@ -1,0 +1,15 @@
+package model;
+
+public class GetLoopNode {
+
+	public Node getLoopNode(Node head){
+		if(head == null || head.next == null || head.next.next == null){
+			return null;
+		}
+		
+		Node fast=head.next.next;
+		Node slow=head.next;
+		
+		
+	}
+}

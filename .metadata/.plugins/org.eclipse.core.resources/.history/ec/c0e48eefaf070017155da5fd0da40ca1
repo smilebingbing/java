@@ -1,0 +1,8 @@
+package model;
+
+public class GetLoopNode {
+
+	public Node getLoopNode(Node head){
+		
+	}
+}

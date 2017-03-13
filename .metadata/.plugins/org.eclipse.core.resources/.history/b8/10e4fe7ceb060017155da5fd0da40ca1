@@ -1,0 +1,11 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Solution6 {
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+    	
+    	
+    	
+    }
+}

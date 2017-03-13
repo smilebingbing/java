@@ -1,7 +1,0 @@
-MODULES_MANAGER_V2
-spider.__init__|D:\WorkSapce\python-spider\src\spider\__init__.py
-spider.html_download|D:\WorkSapce\python-spider\src\spider\html_download.py
-spider.html_outputer|D:\WorkSapce\python-spider\src\spider\html_outputer.py
-spider.html_parse|D:\WorkSapce\python-spider\src\spider\html_parse.py
-spider.spider_main|D:\WorkSapce\python-spider\src\spider\spider_main.py
-spider.url_manager|D:\WorkSapce\python-spider\src\spider\url_manager.py

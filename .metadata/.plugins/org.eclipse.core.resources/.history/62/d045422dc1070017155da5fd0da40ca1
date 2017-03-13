@@ -1,0 +1,25 @@
+package model;
+
+public class Solution9 {
+
+	public void reOrderArray(int [] array){
+		int len = array.length;
+		int [] a=new int[len];
+		int count=0;
+		for(int i=0;i<len;i++){
+			if(array[i] % 2 !=0){
+				count++;
+				a[i] = array[i];
+			}
+		}
+		for(int i=0;i<len;i++){
+			if(array[i] % 2 == 0){
+				a[count+i]=array[i];
+			}
+		}
+		for(int i=0;i<len;i++){
+			array[i]=a[i];
+		}
+		
+	}
+}

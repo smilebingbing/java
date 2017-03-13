@@ -1,13 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=mvc/src&lt;com.atguigu.mvcapp.db{JdbcUtils.java[JdbcUtils" modifiers="1" timestamp="1483251136690"/>
-<typeInfo handle="=mvc/src&lt;com.atguigu.mvcapp.dao.impl{CustomerDAOJdbcImpl.java[CustomerDAOJdbcImpl" modifiers="1" timestamp="1483405556854"/>
-<typeInfo handle="=mvc/src&lt;com.atguigu.mvcapp.dao{CustomerDAO.java[CustomerDAO" modifiers="513" timestamp="1483405353662"/>
-<typeInfo handle="=Filter/C:\/Program Files\/Java\/jre1.8.0_60\/lib\/rt.jar&lt;com.sun.org.apache.xalan.internal.xsltc.dom(Filter.class[Filter" modifiers="1537" timestamp="1457138709382"/>
-<typeInfo handle="=Filter/D:\/install file\/apache-tomcat-6.0.45-windows-x64\/apache-tomcat-6.0.45\/lib\/servlet-api.jar&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1454324914000"/>
-<typeInfo handle="=0228/C:\/Program Files\/Java\/jre1.8.0_60\/lib\/rt.jar&lt;java.lang(String.class[String" modifiers="49" timestamp="1457138709382"/>
-<typeInfo handle="=0228/C:\/Program Files\/Java\/jre1.8.0_60\/lib\/rt.jar&lt;com.sun.xml.internal.ws.api.message(SuppressAutomaticWSARequestHeadersFeature.class[SuppressAutomaticWSARequestHeadersFeature" modifiers="33" timestamp="1457138709382"/>
-<typeInfo handle="=0228/C:\/Program Files\/Java\/jre1.8.0_60\/lib\/rt.jar&lt;java.lang(SuppressWarnings.class[SuppressWarnings" modifiers="9729" timestamp="1457138709382"/>
-<typeInfo handle="=bookstore_day2017/src&lt;com.atguigu.bookstore.dao.impl{BaseDAO.java[BaseDAO" modifiers="1" timestamp="1487509773271"/>
-<typeInfo handle="=bookstore_day2017/src&lt;com.atguigu.bookstore.dao.impl{BookDAOImpl.java[BookDAOImpl" modifiers="1" timestamp="1487555006817"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
