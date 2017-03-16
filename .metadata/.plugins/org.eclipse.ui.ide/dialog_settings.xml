@@ -8,15 +8,17 @@
 		<item value="250" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="ExternalProjectImportWizard">
-		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="D:\postgraduation study\Java study\java web example\source\day_45_bookstore"/>
 			<item value="D:\postgraduation study\Java study\java web example\17. 尚硅谷_佟刚_JavaWEB案例_PPT及源代码\day_45_bookstore"/>
 			<item value="D:\WorkSapce"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\Bing\Desktop\201703142115.zip"/>
 			<item value=""/>
 		</list>
 	</section>

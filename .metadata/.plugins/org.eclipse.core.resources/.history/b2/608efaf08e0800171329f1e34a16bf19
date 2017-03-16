@@ -1,0 +1,19 @@
+package com.java.offer;
+
+import java.util.Arrays;
+
+public class Solution6 {
+
+	public int minNumberInRotateArray(int [] array) {
+	    
+        int len = array.length;
+        int min = 0;
+        for(int i=1;i<len ;i++){
+        	
+        	if(array[i] < array[0]){
+        		min = array[i];
+        	}
+        }
+        return min;
+    }
+}

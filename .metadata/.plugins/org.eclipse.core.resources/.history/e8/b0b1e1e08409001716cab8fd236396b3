@@ -1,0 +1,38 @@
+package com.java.offer;
+//和为S的连续正数序列
+import java.util.ArrayList;
+public class Solution17 {
+    public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
+       ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+       if(sum < 3){
+    	   return new ArrayList<ArrayList<Integer>>();
+       }
+       int small = 1;
+       int big = 2;
+       int cursum = small + big;
+       while(small < (1+sum)/2){
+    	   if(cursum == sum){
+    		   list.addAll(printContinusSequence(small, big));
+    	   }
+    	   while(cursum > sum && small < (1+sum)/2){
+    		   cursum -=small;
+    		   small ++;
+    		   
+    		   if(cursum == sum){
+    			   printContinusSequence(small, big);
+    		   }
+    	   }
+    	   big ++;
+    	   cursum +=big;
+       }
+    }  
+    	ArrayList<Integer> arrlist = new ArrayList<Integer>();
+
+       public ArrayList<Integer> printContinusSequence(int small, int big){
+    	  for(int i = small;i <= big;i++){
+    		  arrlist.add(i);
+    	  }
+    	  return arrlist;
+       }
+    
+}

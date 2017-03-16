@@ -1,0 +1,8 @@
+package com.java.offer;
+
+public class Solution14 {
+
+	public String LeftRotateString(String str, int n){
+		
+	}
+}
