@@ -1,0 +1,22 @@
+package com.java.offer;
+
+public class BinaryTree {
+
+	public static Node1 init(){
+		
+		NodeTree I = new NodeTree(8,null,null);
+		NodeTree H = new NodeTree(4,null,null);
+		NodeTree G = new NodeTree(2,null,null);
+		NodeTree F = new NodeTree(7,null,I);
+		NodeTree E = new NodeTree(5,H,null);
+		NodeTree D = new NodeTree(1,null,G);
+		NodeTree C = new NodeTree(9,F,null);
+		NodeTree B = new NodeTree(3,D,E);
+		NodeTree A = new NodeTree(6,B,C);
+		return A;
+	}
+	
+	public static void PreOrder(int root){
+		
+	}
+}

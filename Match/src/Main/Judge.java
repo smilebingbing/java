@@ -8,7 +8,7 @@ import pojo.BusDataByTime;
 
 public class Judge {
 	
-	Queue<BusDataByTime> que = new LinkedList<BusDataByTime>();     //每次添加一次数据，就计算一次
+	static Queue<BusDataByTime> que = new LinkedList<BusDataByTime>();     //每次添加一次数据，就计算一次
 	public boolean IsTrafficJam() {
 		Iterator<BusDataByTime> iter = que.iterator();
 		double averageSpeed = 0;
@@ -16,8 +16,11 @@ public class Judge {
 			BusDataByTime data = iter.next();
 			averageSpeed += data.getSpeed();
 		}
+		util.Collections.Print(que);
 		averageSpeed /= que.size();
-		System.out.println(averageSpeed);          //////////////////////////////////////////
+		
+		System.out.printf("%.4f",averageSpeed);          //////////////////////////////////////////
+		System.out.println();
 		if(averageSpeed >= 3) {
 			return false;
 		}
@@ -30,6 +33,7 @@ public class Judge {
 			que.offer(data);
 			if(IsTrafficJam()) {
 				/////计算拥堵范围
+				System.out.println("拥堵");
 			}
 			System.out.println(data.getTime());
 			return true;
@@ -40,6 +44,8 @@ public class Judge {
 	
 	public void pull() {
 		if(que.size() >= 700) {
+			System.out.println("取出了数据");
+			
 			que.remove();
 		} 
 	}

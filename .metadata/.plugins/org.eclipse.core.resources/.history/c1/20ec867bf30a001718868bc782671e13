@@ -1,0 +1,86 @@
+package com.java.offer;
+
+public class BinaryTree {
+
+	public static NodeTree init(){
+		
+		NodeTree I = new NodeTree(8,null,null);
+		NodeTree H = new NodeTree(4,null,null);
+		NodeTree G = new NodeTree(2,null,null);
+		NodeTree F = new NodeTree(7,null,I);
+		NodeTree E = new NodeTree(5,H,null);
+		NodeTree D = new NodeTree(1,null,G);
+		NodeTree C = new NodeTree(9,F,null);
+		NodeTree B = new NodeTree(3,D,E);
+		NodeTree A = new NodeTree(6,B,C);
+		return A;
+	}
+	
+	public static void printNode(NodeTree node){
+		System.out.println(node.getValue());
+	}
+	//先序遍历
+	public static void PreOrder(NodeTree root){
+		printNode(root);
+		if(root.getLeft() != null){
+			PreOrder(root.getLeft());
+		}
+		if(root.getRight() != null){
+			PreOrder(root.getRight());
+		}
+	}
+	
+	//中序遍历
+	public static void InOrder(NodeTree root){
+		if(root.getLeft() != null){
+			InOrder(root.getLeft());
+		}
+		printNode(root);
+		if(root.getRight() != null){
+			InOrder(root.getRight());
+		}
+	}
+	
+	//后序遍历
+	public static void PostOrder(NodeTree root){
+		if(root.getLeft() != null){
+			PostOrder(root.getLeft());
+		}
+		if(root.getRight() != null){
+			PostOrder(root.getRight());
+		}
+		printNode(root);
+	}
+	
+	public static void main(String[] args) {
+		NodeTree root = init();
+		
+		System.out.print("先序遍历");
+		PreOrder(root);
+		System.out.print("");
+		
+		System.out.print("中序遍历");
+		InOrder(root);
+		System.out.print("");
+		
+		System.out.print("后序遍历");
+		PostOrder(root);
+		System.out.print("");
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

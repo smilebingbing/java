@@ -1,0 +1,8 @@
+package com.java.offer;
+
+public class Convert {
+
+	public Node1 convert(Node1 head){
+		
+	}
+}

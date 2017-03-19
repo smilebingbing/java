@@ -1,0 +1,12 @@
+package com.java.offer;
+//丑数
+/*
+ * 
+ */
+public class Solution23 {
+
+	public int GetUglyNumber_Solution(int index) {
+	
+		
+	}
+}

@@ -15,15 +15,15 @@ import pojo.BusDataByTime;
 public class GetBusData {
 	private static int offset = 0;
 	
-	public static void main(String[] args) {
-		List<BusDataByTime> list = GetBusData.getData();
-		for(int i = 0;i < list.size();i ++) {
-			System.out.println(list.get(i));
-		}
-	}
+//	public static void main(String[] args) {
+//		List<BusDataByTime> list = GetBusData.getData();
+//		for(int i = 0;i < list.size();i ++) {
+//			System.out.println(list.get(i));
+//		}
+//	}
 	public static List<BusDataByTime> getData( ) {
-	    Connection conn = GetConn.getConn();
-	    String sql = "select * from taxi1 where O_LINENO = '139' limit 10 offset ?;";
+	    Connection conn = GetConn.getBusConn();
+	    String sql = "select * from taxi1 where O_LINENO = '327' limit ;1000 offset ?;";
 	    PreparedStatement pstmt;
 	    BusDataByTime bd;
 	    List<BusDataByTime> list = new ArrayList<>();
@@ -31,7 +31,7 @@ public class GetBusData {
 	        pstmt = (PreparedStatement)conn.prepareStatement(sql);
 	        pstmt.setInt(1, offset);
 	        ResultSet rs = pstmt.executeQuery();
-	        offset += 10;
+	        offset += 1000;
 	        //System.out.println("============================");
 	        
 	        while (rs.next()) {

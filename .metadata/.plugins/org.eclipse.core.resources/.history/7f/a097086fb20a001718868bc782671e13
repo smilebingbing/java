@@ -1,0 +1,11 @@
+package DB;
+
+import java.sql.Connection;
+
+public class GetTaxiData {
+
+	public double averageSpeed(int gridX,int gridY) {
+		Connection conn = GetConn.getTaxiConn();
+		String sql = "SELECT T_SPEED FROM data1 WHERE ;"
+	}
+}

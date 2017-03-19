@@ -1,0 +1,20 @@
+package DB;
+
+import java.sql.Connection;
+
+import pojo.MapMatrix;
+
+public class GetTaxiData {
+
+	public double averageSpeed(int gridX,int gridY) {
+		Connection conn = GetConn.getTaxiConn();
+		
+		gridX * 45 + MapMatrix.Start_Latitude = T_Latitude;
+		gridY * 45 + MapMatrix.Start_Longtitude = T_Longtitude;
+		String date = new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date(T_UTCTime * 1000));
+		
+		
+		String sql = "SELECT sum(T_Speed) FROM data1 WHERE " +
+		data 的范围 和 矩阵的范围
+	}
+}

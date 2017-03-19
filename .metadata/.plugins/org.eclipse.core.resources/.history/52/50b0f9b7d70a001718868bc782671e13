@@ -1,0 +1,14 @@
+package pojo;
+
+public class MapMatrix {         //路网的矩阵
+	
+	public static final long End_Latitude = 41866897;
+	public static final long Start_Longtitude = 123308823;
+	public static final long Start_Latitude = 41723817;
+	public static final long End_Longtitude = 123541596;
+	public static final int Degree = 45;
+	
+	static long[][] Map = new long[5173][5173];
+	
+	
+}

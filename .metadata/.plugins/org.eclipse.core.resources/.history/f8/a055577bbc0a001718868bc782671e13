@@ -1,0 +1,26 @@
+package com.java.offer;
+
+import java.util.HashSet;
+
+public class RemoveRep {
+
+	public void removeRep(Node head){
+		if(head == null){
+			return ;
+		}
+		HashSet<Integer> set = new HashSet<Integer>();
+		Node cur = head.next;
+		Node pre = head;
+		set.add(head.value);
+		while(cur != null){
+			if(set.contains(cur.value)){
+				pre.next = cur.next;
+			}else{
+				set.add(cur.value);
+				pre = cur;
+			}
+			cur = cur.next;
+		}
+		
+	}
+}

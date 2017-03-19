@@ -1,0 +1,16 @@
+package com.java.offer;
+
+public class NodeTree {
+
+	public int value;
+	public NodeTree left;
+	public NodeTree right;
+	
+	public NodeTree(int value, NodeTree left, NodeTree right) {
+		super();
+		this.value = value;
+		this.left = left;
+		this.right = right;
+	}
+	
+}

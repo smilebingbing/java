@@ -1,0 +1,14 @@
+package com.java.offer;
+
+public class Convert {
+
+	public Node1 convert(Node1 head){
+		
+	}
+	
+	public void InOrder(Node1 head, Queue<Node1> queue){
+		if(head == null){
+			return ;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package com.java.offer;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Convert {
+
+	public Node1 convert(Node1 head){
+		Queue<Node1> queue = new LinkedList<Node1>();
+	}
+	
+	public void InOrder(Node1 head, Queue<Node1> queue){
+		if(head == null){
+			return ;
+		}
+		InOrder(head.left, queue);
+		queue.offer(head);
+		InOrder(head.right, queue);
+	}
+}

@@ -7,8 +7,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 
 import pojo.BusDataByTime;
-import streamdata.Consumer;
-import streamdata.Producer;
+import streamdata.Server;
+import streamdata.Client;
 
 
 public class Exec {
@@ -17,9 +17,9 @@ public class Exec {
 		
         BlockingQueue<BusDataByTime> queue = new LinkedBlockingQueue<>();
  
-        Producer producer1 = new Producer(queue);  //new多个线程
+        Client producer1 = new Client(queue);  //new多个线程
 
-        Consumer consumer = new Consumer(queue);
+        Server consumer = new Server(queue);
  
         // 借助Executors
         ExecutorService service = Executors.newCachedThreadPool();

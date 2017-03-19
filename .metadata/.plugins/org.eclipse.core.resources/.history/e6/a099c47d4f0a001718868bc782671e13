@@ -1,0 +1,15 @@
+package com.java.offer;
+
+import java.util.Stack;
+
+public class ReverseK {
+
+	public Node reverseKNode(Node head , int k){
+		if(k < 2){
+			return head;
+		}
+		
+		Stack<Node> stack = new Stack<Node>();
+		
+	}
+}

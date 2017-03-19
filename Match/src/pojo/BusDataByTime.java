@@ -42,7 +42,7 @@ public class BusDataByTime {   //公交车数据帧
 	}
 	@Override
 	public String toString() {
-		return "BusDataByTime [longitude=" + longitude+ "   speed = " + speed + "]";
+		return speed + "";
 	}
 
 

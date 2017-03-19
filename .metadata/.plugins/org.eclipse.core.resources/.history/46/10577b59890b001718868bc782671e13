@@ -1,0 +1,8 @@
+package com.java.offer;
+
+public class Solution27 {
+
+	public boolean VerifySquenceOfBST(int [] sequence) {
+        
+    }
+}
