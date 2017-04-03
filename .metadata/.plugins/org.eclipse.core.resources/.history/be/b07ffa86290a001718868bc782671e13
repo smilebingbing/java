@@ -1,9 +1,0 @@
-package com.java.offer;
-import java.util.*;
-public class Solution24 {
-
-	public String PrintMinNumber(int [] numbers) {
-
-		
-    }
-}

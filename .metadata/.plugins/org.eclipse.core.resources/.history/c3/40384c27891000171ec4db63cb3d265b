@@ -1,0 +1,23 @@
+package test;
+//通过百分之七十用例，————————改————————————
+import java.util.Scanner;
+
+public class Circle {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			int n = sc.nextInt();
+			int r = (int) Math.sqrt(n);
+			int count = 0;
+			for(int x = 0;x < r;x++){
+				double y = Math.sqrt(n - x*x);
+				y = (int) y;
+				if(y*y == (n - x*x)){
+					count ++;
+				}
+			}
+			System.out.println(count *4 );
+		}
+	}
+}

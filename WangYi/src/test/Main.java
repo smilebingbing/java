@@ -1,0 +1,35 @@
+package test;
+//循环单词
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Set<String> set = new HashSet<>();
+		int n = sc.nextInt();
+		sc.nextLine();
+		int count = 0;
+		for(int i = 0;i < n;i++){
+			String a = sc.nextLine();
+			if(!set.contains(a)){
+				count ++;
+				set.add(a);
+				String b = change(a);
+				while(!b.equals(a)){
+					set.add(b);
+					b = change(b);
+				}
+			}
+		}
+		System.out.println(count);
+	}
+	
+	public static String change(String str){
+		String b = str.substring(str.length() - 1) + str.substring(0, str.length() - 1);
+		return b;
+	}
+}

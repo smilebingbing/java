@@ -1,0 +1,19 @@
+package com.java.character;
+
+public class Valid {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public boolean isValid(char [] ch){
+		if(ch[0] == '-' || (ch[0] < '0' && ch[0] > '9')){
+			return false;
+		}
+		
+		if(ch[0] == '0'){
+			
+		}
+	}
+}

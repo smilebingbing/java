@@ -1,0 +1,30 @@
+package com.java.character;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class change26 {
+
+	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		while(sc.hasNext()){
+//			String str = sc.nextLine();
+//			int resu = 0;
+//			char [] ch = str.toCharArray();
+//			int radios = 1;
+//			for(int i = ch.length - 1;i >= 0;i --){
+//				resu += (ch[i] - 'a') * radios;
+//				radios *= 26;
+//			}
+//			System.out.println(resu);
+//		}
+	
+	
+	Scanner sc = new Scanner(System.in);
+	char[] chars = new char[6];
+	for(int i = 0;i < 6;i ++) {
+		String s = sc.nextLine();
+		chars = s.toCharArray();
+	}
+	}
+}

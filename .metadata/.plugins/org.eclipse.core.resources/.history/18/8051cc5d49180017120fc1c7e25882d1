@@ -1,0 +1,24 @@
+package character;
+import java.util.*;
+//清除行列
+/*
+ * 请编写一个算法，若N阶方阵中某个元素为0，则将其所在的行与列清零。
+ */
+public class Clearer {
+    public int[][] clearZero(int[][] mat, int n) {
+        // write code here
+    	for(int i = 0; i < n; i ++){
+    		for(int j = 0; j < n; j ++){
+    			if(mat[i][j] == 0){
+    				for(int x = 0;x < n;x ++){
+    					mat[i][x] = 0;
+    					mat[x][j] = 0;
+    				}
+    				
+    			}
+    			break;
+    		}
+    	}
+    	return mat;
+    }
+}

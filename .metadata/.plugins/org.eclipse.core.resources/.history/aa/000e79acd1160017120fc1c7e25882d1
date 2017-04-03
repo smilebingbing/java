@@ -1,0 +1,21 @@
+package com.java.character;
+
+import java.util.Scanner;
+
+public class change26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			String str = sc.nextLine();
+		}
+	}
+
+	public static String change(String str){
+		char [] ch = str.toCharArray();
+		int [] array = new int[26];
+		
+	}
+}

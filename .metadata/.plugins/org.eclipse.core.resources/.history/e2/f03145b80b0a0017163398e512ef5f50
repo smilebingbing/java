@@ -1,9 +1,0 @@
-package com.java.offer;
-
-public class Solution23 {
-
-	public int GetUglyNumber_Solution(int index) {
-	
-		
-	}
-}

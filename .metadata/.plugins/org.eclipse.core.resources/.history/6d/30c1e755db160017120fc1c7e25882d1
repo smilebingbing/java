@@ -1,0 +1,8 @@
+package com.java.character;
+
+public class ModifyString {
+
+	public static void modify(char [] ch){
+		
+	}
+}

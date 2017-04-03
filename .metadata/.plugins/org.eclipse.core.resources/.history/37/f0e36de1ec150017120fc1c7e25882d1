@@ -1,0 +1,19 @@
+package com.java.character;
+
+public class GetIndexString {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static String getIndexString(String str , int index){
+		if(str == null || str.equals("") || index <= 0){
+			return " ";
+		}
+		
+		boolean stage = true;
+		int num = 0;
+		char [] ch = str.toCharArray();
+		
+	}
+}

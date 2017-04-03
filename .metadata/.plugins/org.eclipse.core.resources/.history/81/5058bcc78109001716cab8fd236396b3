@@ -1,8 +1,0 @@
-package com.java.offer;
-
-import java.util.ArrayList;
-public class Solution17 {
-    public ArrayList<ArrayList<Integer> > FindContinuousSequence(int sum) {
-       
-    }
-}

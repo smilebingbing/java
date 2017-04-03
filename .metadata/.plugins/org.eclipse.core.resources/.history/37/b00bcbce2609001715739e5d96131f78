@@ -1,8 +1,0 @@
-package com.java.offer;
-
-public class Solution11 {
-
-	public int StrToInt(String str){
-		
-	}
-}

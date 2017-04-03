@@ -1,0 +1,13 @@
+package character;
+
+import java.util.*;
+
+public class Different {
+    public boolean checkDifferent(String iniString) {
+        // write code here
+    	char [] ch = iniString.toCharArray();
+    	if(ch == null){
+    		return true;
+    	}
+    }
+}

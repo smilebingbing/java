@@ -1,0 +1,10 @@
+package character;
+
+import java.util.*;
+
+public class Same {
+    public boolean checkSam(String stringA, String stringB) {
+        // write code here
+    	
+    }
+}

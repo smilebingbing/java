@@ -1,0 +1,10 @@
+package com.java.character;
+//去掉字符串中连续出现K个0的子串
+public class RemoveKZeros {
+
+	public String removeKZeros(String str, int k){
+		if(str == null || k < -1){
+			
+		}
+	}
+}

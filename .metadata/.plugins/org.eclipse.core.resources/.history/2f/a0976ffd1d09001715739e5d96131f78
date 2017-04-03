@@ -1,8 +1,0 @@
-package com.java.offer;
-
-public class Solution10 {
-
-	public int Add(int num1,int num2) {
-        
-    }
-}

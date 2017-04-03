@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Bus"
+  id="myeclipse.1490529935074"
+  context-root="/Bus"
+  j2ee-spec="6.0"
+  archive="Bus.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

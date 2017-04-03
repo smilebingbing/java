@@ -1,8 +1,0 @@
-package com.java.offer;
-//丑数
-/*
- * 只包含因子2,3,5的数称为丑数，1是第一个丑数
- */
-public class Solution22 {
-
-}

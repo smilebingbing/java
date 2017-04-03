@@ -1,0 +1,16 @@
+package com.java.character;
+
+public class Replace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void replace(char [] ch){
+		if(ch == null || ch.length == 0){
+			return ;
+		}
+		
+	}
+}

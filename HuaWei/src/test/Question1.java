@@ -12,7 +12,7 @@ public class Question1 {
 		while(sc.hasNextLine()) {
 			String s = sc.nextLine();
 			resu = new Integer(Integer.parseInt(s, 7));
-			System.out.println(resu); ;
+			System.out.println(resu);
 		}
 	}
 }

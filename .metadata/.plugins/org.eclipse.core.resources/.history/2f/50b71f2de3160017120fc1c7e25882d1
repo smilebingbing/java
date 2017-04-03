@@ -1,0 +1,29 @@
+package com.java.character;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class change26 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			String str = sc.nextLine();
+			int resu = 0;
+			char [] ch = str.toCharArray();
+			int radios = 1;
+			for(int i = ch.length - 1;i >= 0;i --){
+				resu += (ch[i] - 'a') * radios;
+				radios *= 26;
+			}
+			System.out.println(radios);
+			//System.out.println(BigInteger(res).toString());
+		}
+	}
+
+	private static Object BigInteger(String res) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

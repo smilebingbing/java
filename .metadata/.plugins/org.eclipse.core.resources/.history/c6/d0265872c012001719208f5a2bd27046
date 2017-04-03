@@ -1,0 +1,27 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class T8 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int w = sc.nextInt();
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int z = sc.nextInt();
+		List<Integer> list = new ArrayList<>();
+		
+		for(int p = w;p <= x;p ++){
+			for(int q = y;q <= z;q++){
+				int temp = p/q;
+				if(!list.contains(temp)){
+					list.add(temp);
+				}
+			}
+		}
+		System.out.println(list.size());
+	}
+}

@@ -1,0 +1,28 @@
+package com.java.character;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class change26 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			String str = sc.nextLine();
+		}
+	}
+
+	public static String change(String str){
+		String res = "";
+		char [] ch = str.toCharArray();
+		for(int i = ch.length - 1;i >= 0;i --){
+			int bits = Integer.valueOf(ch[i] - '0');
+			 res += bits * Math.pow(26, ch.length - 1 - i); 
+		}
+		
+		
+	}
+}

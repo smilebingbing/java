@@ -1,0 +1,21 @@
+package character;
+
+import java.util.*;
+
+public class Zipper {
+    public String zipString(String iniString) {
+        // write code here
+    	if(iniString == null){
+    		return iniString;
+    	}
+    	char [] ch = iniString.toCharArray();
+    	String res = String.valueOf(ch[0]);
+    	int num = 1;
+    	for(int i = 1; i < ch.length; i ++){
+    		if(ch[i] == ch[i - 1]){
+    			
+    		}
+    	}
+    	
+    }
+}

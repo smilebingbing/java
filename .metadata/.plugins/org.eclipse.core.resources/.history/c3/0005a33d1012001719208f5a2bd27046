@@ -1,0 +1,24 @@
+package test;
+
+import java.util.Scanner;
+
+public class T1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] input = new int[n];
+		for(int i = 0;i < n;i ++) {
+			input[i] = sc.nextInt();
+		}
+		sc.close();
+		
+		long resu = 0;
+		for(int i = 0;i < n;i ++) {
+			resu += (input[i]/ 1024);
+		}
+		
+		int res = (int)Math.ceil(resu/2);
+		System.out.println(res*1024);
+	}
+}

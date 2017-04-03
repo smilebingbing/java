@@ -1,0 +1,12 @@
+package recursive;
+
+public class MatrixPathSum2 {
+
+	public int minPathSum(int [][] m){
+		if(m == null || m.length == 0 || m[0] == null || m[0].length == 0){
+			return 0;
+		}
+		int more = Math.max(m.length, m[0].length);
+		int less = Math.min(m.length, m[0].length);
+	}
+}

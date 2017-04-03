@@ -1,0 +1,9 @@
+package com.java.character;
+
+public class isDeformation {
+
+	public boolean isDeformation(String str1 , String str2){
+		
+	}
+
+}

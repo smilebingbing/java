@@ -1,8 +1,0 @@
-package com.java.offer;
-
-public class Solution12 {
-
-	public boolean isContinuous(int [] numbers){
-		
-	}
-}

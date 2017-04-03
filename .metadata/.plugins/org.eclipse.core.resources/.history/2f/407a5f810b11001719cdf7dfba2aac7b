@@ -1,0 +1,9 @@
+package com.java.offer;
+
+public class GetNextNode {
+
+
+
+	public static Node getNextNode(Node )
+
+}

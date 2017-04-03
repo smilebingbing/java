@@ -1,8 +1,0 @@
-package com.java.offer;
-
-public class RemoveValue {
-
-	public Node removeValue(Node head, int num){
-		
-	}
-}

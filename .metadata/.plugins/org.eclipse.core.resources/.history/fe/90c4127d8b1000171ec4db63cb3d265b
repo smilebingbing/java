@@ -1,0 +1,39 @@
+package pojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PortList244 {
+
+	List<BusPort> list = new ArrayList<BusPort>();
+	
+	public PortList244() {
+		
+		
+		list.add(new BusPort(123.511307,41.737985, 1, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 2, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 3, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 4, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 5, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 6, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 7, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 8, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 9, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 10, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 11, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 12, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 13, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 14, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 15, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 16, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 17, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 18, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 19, "东北大学南门"));
+		list.add(new BusPort(123.511307,41.737985, 20, "东北大学南门"));
+		
+
+
+	}
+	
+
+}
